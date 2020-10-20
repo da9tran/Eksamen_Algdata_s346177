@@ -19,5 +19,7 @@ og hver logg-melding beskriver det jeg har gjort av endringer.
 
 Jeg startet med å lagre den opprinelige utleverte kildekoden i git.
 
-* Oppgave 1: Løste ved å implementere ...
+* Oppgave 0: La klassen eksamenSBinTre inn i mitt Java-prosjekt, og la til noen instanser av klassen EksamenSBinTre. 
+Deretter sjekket jeg at det ikke ga noen syntaksfeil eller kjørefeil. Prøvde Integer, Character og String som datatyper.
+* Oppgave 1: 
 * Oppgave 2: ...
