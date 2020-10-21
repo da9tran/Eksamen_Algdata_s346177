@@ -28,4 +28,8 @@ boolean leggInn(T verdi). Deretter gjorde jeg noen endringer, fra "p = new Node<
 til " p = new Node<T>(verdi, q);". Så testet jeg følgende kode på Main gitt i oppgaven, som 
 ga utskrift 10.
 
-* Oppgave 2: ...
+* Oppgave 2: Først implementerte jeg metoden public int antall(T verdi), som skal returnere 
+antall forekomster av verdi i treet. Jeg har tatt utganspunktet i at duplikater er tillatt, 
+det vil si at en verdi kan komme flere ganger. Men hvis null ikke er i treet, skal metoden 
+returnere 0. Til slutt testet jeg kodebiten gitt på oppgave 2. Den blir kjørt og jeg får tilsvarende 
+samme utskrift. 
