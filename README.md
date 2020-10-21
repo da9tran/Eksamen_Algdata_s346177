@@ -19,12 +19,13 @@ og hver logg-melding beskriver det jeg har gjort av endringer.
 
 Jeg startet med å lagre den opprinelige utleverte kildekoden i git.
 
-* Oppgave 0: La klassen eksamenSBinTre inn i mitt Java-prosjekt, og la til noen instanser av klassen EksamenSBinTre. 
-Deretter sjekket jeg at det ikke ga noen syntaksfeil eller kjørefeil. Prøvde Integer, Character og String som datatyper.
+* Oppgave 0: La klassen eksamenSBinTre inn i mitt Java-prosjekt, og la til noen 
+instanser av klassen EksamenSBinTre. Deretter sjekket jeg at det ikke ga noen syntaksfeil 
+eller kjørefeil. Prøvde Integer, Character og String som datatyper.
 
-* Oppgave 1: Kopierte kodebiten fra kompendiet, Programkode 5.2 3 a), som er metoden public boolean leggInn(T verdi). Deretter
-gjorde jeg noen endringer, fra "p = new Node<>(verdi);" til " p = new Node<T>(verdi, q);". Så testet jeg følgende kode på Main gitt 
-i oppgaven, som ga utskrift 10.
-
+* Oppgave 1: Kopierte kodebiten fra kompendiet, Programkode 5.2 3 a), som er metoden public 
+boolean leggInn(T verdi). Deretter gjorde jeg noen endringer, fra "p = new Node<>(verdi);" 
+til " p = new Node<T>(verdi, q);". Så testet jeg følgende kode på Main gitt i oppgaven, som 
+ga utskrift 10.
 
 * Oppgave 2: ...
