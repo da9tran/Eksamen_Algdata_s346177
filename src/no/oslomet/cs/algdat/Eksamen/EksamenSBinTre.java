@@ -137,7 +137,7 @@ public class EksamenSBinTre<T> {
     }
 
     private static <T> Node<T> førstePostorden(Node<T> p) {
-        if (p == null) throw new NoSuchElementException("Treet er tomt!");
+        if (p == null) throw new NoSuchElementException("Treet er tom!");
 
         while (true) {
             if (p.venstre != null) p = p.venstre;
@@ -147,7 +147,32 @@ public class EksamenSBinTre<T> {
     }
 
     private static <T> Node<T> nestePostorden(Node<T> p) {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
+        Node<T> n = p.forelder;
+
+        while (n != null) {
+            if (n.venstre == p) {
+                p = p.forelder;
+
+                if (n.høyre == null) {
+                    return p;
+                }
+
+                else {
+                    p = p.høyre;
+                    if (p.venstre ==null && p.høyre == null)
+                        return p;
+                    else
+                        return førstePostorden(p);
+                }
+            }
+
+            else if (n.høyre == p) {
+                p = p.forelder;
+                return p;
+            }
+        }
+
+        return null;
     }
 
     public void postorden(Oppgave<? super T> oppgave) {
