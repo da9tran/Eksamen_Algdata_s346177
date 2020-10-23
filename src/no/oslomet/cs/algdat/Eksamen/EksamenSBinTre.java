@@ -173,6 +173,7 @@ public class EksamenSBinTre<T> {
         }
 
         return null;
+
     }
 
     public void postorden(Oppgave<? super T> oppgave) {
