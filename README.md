@@ -39,3 +39,11 @@ fra kompendiet i seksjon 5.1.7, som viste detaljer om postorden, og hvordan man 
 Deretter implementerte jeg metoden for private private static <T> Node<T> nestePostorden(Node<T> p) som returnerer 
 den noden som kommer "p" i postorden. 
 
+* Oppgave 4: Først implementerte jeg metoden public void postorden(Oppgave<? super T> oppgave), her brikte 
+jeg en while loop until p == null. Deretter implementerte jeg hjelpe metoden public void postordenRecursive
+(Oppgave<? super T> oppgave), som skal sjekke om treet er tomt, for at private void postordenRecursive
+(Node<T> p, Oppgave<? super T> oppgave) skal kunne kjøre og returnere et rekursivt kall som traverserer teet
+i postorden rekkefølgen, som vil si at den skal besøke alle nodene etter tur i en bestemt rekkefølge.
+
+
+
