@@ -201,7 +201,20 @@ public class EksamenSBinTre<T> {
     }
 
     public ArrayList<T> serialize() {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
+        if (tom()) return new ArrayList<>();
+
+        ArrayList<Node<T>> kø = new ArrayList<>();
+        ArrayList<T> serialisering = new ArrayList<>();
+        kø.add(rot);
+        while (!kø.isEmpty()) {
+            Node<T> current = kø.remove(0);
+            if (current != null) {
+                serialisering.add(current.verdi);
+                kø.add(current.venstre);
+                kø.add(current.høyre);
+            }
+        }
+        return serialisering;
     }
 
     static <K> EksamenSBinTre<K> deserialize(ArrayList<K> data, Comparator<? super K> c) {
