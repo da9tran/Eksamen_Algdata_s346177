@@ -218,7 +218,14 @@ public class EksamenSBinTre<T> {
     }
 
     static <K> EksamenSBinTre<K> deserialize(ArrayList<K> data, Comparator<? super K> c) {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
+        if (data.size() == 0 || data == null) {
+
+            return null;
+        }
+        EksamenSBinTre<K> node = new EksamenSBinTre<>(c);
+        for (K t : data) node.leggInn(t);
+
+        return node;
     }
 
 
