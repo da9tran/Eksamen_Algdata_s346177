@@ -46,4 +46,10 @@ jeg en while loop until p == null. Deretter implementerte jeg hjelpe metoden pub
 i postorden rekkefølgen, som vil si at den skal besøke alle nodene etter tur i en bestemt rekkefølge.
 
 
+* Oppgave 5: Først implementerte jeg hjelpemetoden public ArrayList<T> serialize(), hvor jeg lagde to array 
+lister. Her implementerte jeg en while metode som skal ta ut noden, og en if metode for å legge til 
+serialiseringen,og legge til barn til køen. Også implementerte jeg metoden static <K> EksamenSBinTre<K> 
+deserialize(ArrayList<K> data, Comparator<? super K> c), som skal lage et nytt tre(node) ut ifra et array, 
+altså gjenskape det tidligere treet fra serialize metoden.
+
 
