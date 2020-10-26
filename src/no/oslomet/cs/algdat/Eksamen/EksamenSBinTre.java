@@ -106,8 +106,69 @@ public class EksamenSBinTre<T> {
         return true;                             // vellykket innlegging
     }
 
-    public boolean fjern(T verdi) {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
+    public boolean fjern(T verdi){
+        if (null == verdi){
+            return false;
+        }
+
+        Node <T> p = rot, q = null;
+
+        while (p != null){
+            int compare = comp.compare(verdi, p.verdi);
+            if (compare < 0){
+                q = p;
+                p = p.venstre;
+            }
+            else if (compare > 0){
+                q = p;
+                p = p.høyre;
+            }
+            break;
+
+        }
+        if (p == null){
+            return false;
+        }
+        if (p.venstre == null || p.høyre == null){
+            Node<T> barn = p.venstre != null ? p.venstre : p.høyre;
+
+            if (barn != null){
+                barn.forelder = q;
+            }
+            if (p == rot){
+                rot = barn;
+            }
+            else if (p == q.venstre){
+                q.venstre = barn;
+            }
+            else if (p == q.venstre){
+                q.venstre = barn;
+
+            }
+            else q.høyre = barn;
+        }
+
+        else {
+            Node <T> s = p, r = p.høyre;
+            while (r.venstre != null){
+                s = r;
+                r = r.venstre;
+            }
+            p.verdi = r.verdi;
+
+            if (r.høyre != null) {
+                s = r.høyre.forelder;
+            }
+            if (s != p){
+                s.venstre = r.høyre;
+            }
+            else {
+                s.høyre = r.høyre;
+            }
+        }
+        antall--;
+        endringer++;
+        return true;
     }
 
     public int fjernAlle(T verdi) {
