@@ -197,6 +197,20 @@ public class EksamenSBinTre<T> {
         return count;
     }
 
+    private static <T> void nullstill(Node<T> p){
+        if (p.høyre != null){
+            nullstill (p.høyre);
+            p.høyre = null;
+        }
+
+        if (p.venstre != null){
+            nullstill(p.venstre);
+            p.venstre = null;
+        }
+
+        p.verdi = null;
+    }
+
     public void nullstill() {
         throw new UnsupportedOperationException("Ikke kodet ennå!");
     }
