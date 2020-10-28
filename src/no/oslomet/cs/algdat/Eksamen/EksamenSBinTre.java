@@ -212,7 +212,13 @@ public class EksamenSBinTre<T> {
     }
 
     public void nullstill() {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
+        if (!tom()){
+            nullstill(rot);
+        }
+        rot = null;
+        antall = 0;
+        endringer ++;
+
     }
 
     private static <T> Node<T> førstePostorden(Node<T> p) {
