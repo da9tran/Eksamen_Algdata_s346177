@@ -14,7 +14,7 @@ Se oblig-tekst for alle krav, og husk spesielt på følgende:
 
 # Beskrivelse av oppgaveløsning (4-8 linjer/setninger per oppgave)
 
-Vi har brukt git til å dokumentere arbeidet vårt. Jeg har 16 commits totalt, 
+Jeg har brukt git til å dokumentere arbeidet mitt. Jeg har 31 commits totalt, 
 og hver logg-melding beskriver det jeg har gjort av endringer.
 
 * Oppgave 0: Jeg startet med å lagre den opprinelige utleverte kildekoden i git. La klassen 
@@ -23,9 +23,9 @@ Deretter sjekket jeg at det ikke ga noen syntaksfeil eller kjørefeil. Prøvde I
 og String som datatyper. 
 
 * Oppgave 1: Kopierte kodebiten fra kompendiet, Programkode 5.2 3 a), som er metoden public 
-boolean leggInn(T verdi). Deretter gjorde jeg noen endringer, fra "p = new Node<>(verdi);" 
-til " p = new Node<T>(verdi, q);". Så testet jeg følgende kode på Main gitt i oppgaven, som 
-ga utskrift 10. 
+boolean leggInn(T verdi). Endrett litt på koden for at referansen foreldre får korrekt verdi i hver 
+node. Deretter gjorde jeg noen endringer, fra "p = new Node<>(verdi);" til " p = new Node<T>(verdi, q);".
+Så testet jeg følgende kode på Main gitt i oppgaven, som ga utskrift 10. 
 
 * Oppgave 2: Først implementerte jeg metoden public int antall(T verdi), som skal returnere 
 antall forekomster av verdi i treet. Jeg har tatt utganspunktet i at duplikater er tillatt, 
