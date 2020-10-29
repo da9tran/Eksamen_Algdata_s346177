@@ -20,12 +20,12 @@ og hver logg-melding beskriver det jeg har gjort av endringer.
 * Oppgave 0: Jeg startet med å lagre den opprinelige utleverte kildekoden i git. La klassen 
 eksamenSBinTre inn i mitt Java-prosjekt, og la til noen instanser av klassen EksamenSBinTre. 
 Deretter sjekket jeg at det ikke ga noen syntaksfeil eller kjørefeil. Prøvde Integer, Character 
-og String som datatyper.
+og String som datatyper. 
 
 * Oppgave 1: Kopierte kodebiten fra kompendiet, Programkode 5.2 3 a), som er metoden public 
 boolean leggInn(T verdi). Deretter gjorde jeg noen endringer, fra "p = new Node<>(verdi);" 
 til " p = new Node<T>(verdi, q);". Så testet jeg følgende kode på Main gitt i oppgaven, som 
-ga utskrift 10.
+ga utskrift 10. 
 
 * Oppgave 2: Først implementerte jeg metoden public int antall(T verdi), som skal returnere 
 antall forekomster av verdi i treet. Jeg har tatt utganspunktet i at duplikater er tillatt, 
@@ -51,6 +51,15 @@ lister. Her implementerte jeg en while metode som skal ta ut noden, og en if met
 serialiseringen,og legge til barn til køen. Også implementerte jeg metoden static <K> EksamenSBinTre<K> 
 deserialize(ArrayList<K> data, Comparator<? super K> c), som skal lage et nytt tre(node) ut ifra et array, 
 altså gjenskape det tidligere treet fra serialize metoden.
+
+* Oppgave 6: Først implementerte jeg metoden public boolean fjern(T verdi). Denne metoden kopierte jeg fra 
+Programkoden 5.3 8 d).  Men gjorde endingene som trengs for at pekeren foreldre får korrekt verdi i alle nodene etter
+en fjerning. Denne endringer startet etter Node<T> b = p.venstre != null ? p.venstre : p.høyre; i metoden. Deretter 
+implementerte jeg metoden public int fjernAlle(T verdi), som fjerner alle forekomster av verdi i treet, og returnerer 
+antallet som blir fjernet, altså return count. Og hvis treet er tomt, skal det returnere 0, derfor starter jeg med 
+int count = 0; Og før jeg implementerte metoden public void nullstilll(), lagde jeg en hjelpemetode for at nulltill(rot) 
+skal fungere.
+
 
 
 
