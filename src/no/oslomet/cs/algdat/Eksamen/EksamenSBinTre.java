@@ -123,7 +123,7 @@ public class EksamenSBinTre<T> {
                 q = p;
                 p = p.høyre;
             }
-            break;
+            else break;
 
         }
         if (p == null){
@@ -140,10 +140,6 @@ public class EksamenSBinTre<T> {
             }
             else if (p == q.venstre){
                 q.venstre = barn;
-            }
-            else if (p == q.venstre){
-                q.venstre = barn;
-
             }
             else q.høyre = barn;
         }
@@ -199,7 +195,7 @@ public class EksamenSBinTre<T> {
 
     private static <T> void nullstill(Node<T> p){
         if (p.høyre != null){
-            nullstill (p.høyre);
+            nullstill(p.høyre);
             p.høyre = null;
         }
 
@@ -217,7 +213,7 @@ public class EksamenSBinTre<T> {
         }
         rot = null;
         antall = 0;
-        endringer ++;
+        endringer++;
 
     }
 

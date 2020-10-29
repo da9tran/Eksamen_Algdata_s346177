@@ -53,3 +53,7 @@ deserialize(ArrayList<K> data, Comparator<? super K> c), som skal lage et nytt t
 altså gjenskape det tidligere treet fra serialize metoden.
 
 
+
+
+
+
